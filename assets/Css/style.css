@@ -1,0 +1,183 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style the header */
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; /* Align items vertically centered */
+    background-color: #ffffff; 
+    opacity: 80%;
+    padding: 10px 20px; /* Added some padding */
+    color: black;
+    position: fixed;
+    width: 100%;
+    z-index: 1000; /* Ensure header is above other content */
+}
+
+.head-btn button {
+    outline: 1px solid #000000;
+    border-radius: 40px;
+    margin:10px ;
+    padding: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: transparent;
+    color: #000000;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.left {
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+    gap: 4px;
+}
+
+
+nav ul {
+    list-style: none; 
+    display: flex; 
+    gap: 20px;
+    flex-wrap: wrap;
+}
+nav ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+nav ul li img {
+    width: 20px;
+    height: 20px;
+}
+
+.search-bar {
+    border: 1px solid #383535;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 10px;
+}
+
+#searchtext {
+    margin-right: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.search-bar input {
+    padding: 3px;
+    border: none;
+    font-size: 12px;
+    
+    outline: none;
+}
+
+/* Toggle button styles */
+.toggle-button {
+    display: none; /* Hide toggle button by default */
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.left-image{
+    display: none;
+}
+
+/* Style the X button to close the drawer */
+.close-drawer {
+    display: none; /* Hide by default */
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    z-index: 1001;
+}
+
+/* styles.css */
+.background-image {
+    background-image: url('/assets/public/home.jpg');
+    background-size: cover; 
+    background-position: center center ; 
+    background-repeat: no-repeat; 
+    height:100vh; 
+    /* width: 100vw; */
+  }
+  
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .close-drawer {
+        display: block; /* Show the close button when the drawer is active */
+    }
+    nav {
+        /* display: none; */
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 70%; /* Drawer width */
+        height: 100%; /* Full height of the screen */
+        background-color: white;
+        padding: 5px;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease;
+        transform: translateX(100%); /* Initially hidden */
+
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 20px;
+        z-index: 1001;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+    nav ul li {
+        align-items: start;
+        justify-content: center;
+    }
+    .left-image{
+        display: block;
+    }
+    
+    header{
+        justify-content: space-between;
+    }
+    nav.active {
+        transform: translateX(0); /* Slide in from the right */
+    }
+   
+
+    nav.active {
+        display: flex; /* Show nav when active */
+    }
+    #searchtext {
+        margin-right: 0px;
+    font-size: 10px;
+    padding-left: 2px;
+    }
+
+    .left {
+        display: none; /* Hide the left section when drawer is active */
+    }
+    .search-bar {
+        padding: 1px 1px;
+    }
+    
+    .toggle-button {
+        display: block; /* Show toggle button on mobile */
+    }
+}
