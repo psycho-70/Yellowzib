@@ -112,15 +112,18 @@ nav ul li img {
 .background-image {
     background-image: url('/assets/public/home.jpg');
     background-size: cover; 
-    background-position: center center ; 
+    background-position: top center ; 
     background-repeat: no-repeat; 
-    height:100vh; 
+    height:110vh; 
     /* width: 100vw; */
   }
   
 
 /* Responsive styles */
 @media (max-width: 768px) {
+    .background-image{
+        height: 125vh;
+    }
     .close-drawer {
         display: block; /* Show the close button when the drawer is active */
     }
