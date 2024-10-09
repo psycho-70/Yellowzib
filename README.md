@@ -8,14 +8,11 @@
 
 - **Responsive Design**: The website is fully responsive and optimized for various screen sizes (mobile, tablet, and desktop).
 - **Interactive Drawer**: The website features a responsive drawer menu that toggles on mobile screens, providing an enhanced user experience.
-- **Modern Layout**: Clean and professional layout with well-structured sections.
-- **Cross-browser Compatibility**: Works smoothly across different web browsers (Chrome, Firefox, Safari, etc.).
-- **Performance Optimized**: Efficiently written code to enhance performance.
 
 ## Technologies Used
 
 - **HTML5**
-- **CSS3** (Flexbox, Grid, Media Queries)
+- **CSS3** (Flexbox, Media Queries)
 - **JavaScript** (for interactivity, such as drawer toggle)
 
 ## Screenshots
